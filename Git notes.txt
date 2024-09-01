@@ -25,3 +25,10 @@ git me jo file add nahi karna he us file ka name ya to jobhi file he unka extent
 steps create a txt file name as .gitignore and mention jo file/folder ko ignore he
 
 
+easy steps to upload file on git
+1)create repository on github
+then open git bash (right click on file or folder)
+2)type git init
+3)git add file_name
+4)git commit -m"msg ur choose"
+5)git push
