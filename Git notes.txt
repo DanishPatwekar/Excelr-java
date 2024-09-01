@@ -1,0 +1,27 @@
+note:1)git is sw and it download ur laptop from git website 2)github is server service it store all repository
+steps:
+1)download git sw
+2)install default configuration without any changes
+3)open github website and create account or alredy have account then signin
+4)open cmd and check git version git --v
+5)actualy work start from this step :-type git config --global user.name "Danish Patwekar"
+6)then type git config --global user.email "danishpatwekar24@gmail.com"
+7)git clone used for other repository ko copy karke usme changes karne ke liye
+  ex git clone link_of_repository
+8)git status used for changed file show and all files in red color 
+9)git add 'file_name' used for selected file added to repository or git add -a used for all file
+10)git commit -m "msg u give"
+11)git diff used for check which file change
+12)git log used for show latest commit to last commit or git log -4 show latest 4 commit
+     git log -p show description git log -oneline show all commit in one line no description
+13)git log --stat 
+14)git show and give the id of commit: used for particular commit me kya kya changes huye he
+15)"git rm --cached <file> used for delete file
+16 git restore file name   used for delete latest changes
+17)git branch used for show all present branches and also used for create new branch like this git branch branch_name;
+18)git checkout branch_name used for change branch current to other branch
+19)
+git me jo file add nahi karna he us file ka name ya to jobhi file he unka extention mention karte to o file git pe unstages me nahi dikaye garbageCollection
+steps create a txt file name as .gitignore and mention jo file/folder ko ignore he
+
+
