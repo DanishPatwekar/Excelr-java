@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            width: 100%; min-height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: blueviolet;
+        }
+        .box{
+            width: 400px;
+            height: 500px;
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 15px 15px 0 25px;
+            border-radius: 1em;
+            position: relative;
+            margin-top: 20px;
+        }
+        h2{
+            font-weight: bold;
+            font-style: oblique;
+        }
+        .cover{
+            width: 400px;
+            height: 500px;
+            background-color: #8895d6;
+            background-image: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+            display: flex;
+            position: absolute;
+            margin: -15px 15px 0 -25px;
+            border-radius: 1em;
+            justify-content: center;
+            align-items: center;
+            transform-origin:center left;
+            transition: all 0.8s ease-in-out;
+        }
+        .cover:hover{
+            transform: rotateY(180deg);
+            color: yellow;
+        }
+        #covertxt:hover{
+            opacity: 0;
+        }
+        #card2{
+            width: 400px;
+            height: 650px;
+            margin: 50px 0 15px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 1px;
+            background-color: antiquewhite;
+            border-radius: 1em;
+        }
+        #card2 img{
+            width: 100%;
+            height: 40%;
+            border-top-left-radius: 1em;
+            border-top-right-radius: 1em;
+            border: 1px solid black;
+        }
+        .txtbox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 20%;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            line-height: 30px;
+        }
+        .amount{
+            width: 80%;
+            height: 10%;
+            background-color: #8e9fa9;
+            border-radius: 1em; 
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+                       
+        }
+        #paymentbutton{
+            width: 80%;
+            height: 9%;
+            background-color: rgb(22,22,79);
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-style: oblique;
+            font-size: 20px;
+            border-radius: 10px;
+            box-shadow: 12px 10px 25px 5px rgb(75, 70, 70);
+        }
+        #cancelbtn{
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: 550;
+        }
+        .imagebox{
+            width: 15%;
+            border-radius: 1rem;
+            gap: 15px;
+        }
+        .imagebox img{
+            width: 4rem;
+            height: 4rem;
+        }
+        .card3{
+            width: 800px;
+            height: 400px;
+            background-color: purple;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 1em;
+            padding: 1px;
+            margin-top: 1em;
+        }
+        .rightbox{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            position: relative;           
+        }
+        .rightbox img{
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 1em;
+            border-bottom-right-radius:1em;
+        }
+        .leftbox{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: rgb(111, 4, 127);
+            border-radius: 1em;
+            padding: 15px;
+            color: whitesmoke;
+        }
+
+        .footerbox{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 1px;
+            padding-right: 10px;
+        }
+        .subfooter{
+            width: 100%;
+            display: flex;
+            padding-right: 30px;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="cover">
+                <h2 id="covertxt" style="font-family: 'Courier New', Courier, monospace; font-weight: bolder;font-style: italic;">open a card hover mouse</h2>
+            </div>
+            <img src="./images/biryani.jfif" alt="biryani" width="350px" height="300px" style="border-radius: 1em;">
+            <h2>Chicken biryani</h2>
+            <p>delicious, edible, tasteful, tasty, scrumptious, flavorful, delectable,appetizing</p>
+        </div>
+        <div id="card2">
+            <img src="./images/Designer.png">
+            <div class="txtbox">
+                <h2>Order Summary</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dicta iusto laboriosam doloribus quae maiores vitae doloremque! Corporis totam, ut ea dolore illo eius pariatur.</p>
+            </div>
+            <div class="amount">
+                <div class="imagebox"><img src="./images/insta_logo.png" alt=""></div>
+                <h3>499$</h3>
+                <P>Amount Pay</P>
+                <a href="#">Change</a>
+            </div>
+                <button id="paymentbutton">Proceed To Payment</button>
+                <a href="#" id="cancelbtn">Cancel Order</a> 
+        </div>
+        <div class="card3">
+            <div class="leftbox">
+                <h1>Get insights that help your bussiness grow</h1>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure labore laborum sequi nihil. Ipsam numquam eveniet consectetur, esse atque delectus consequuntur sit perferendis sint! Eaque sint saepe et ut rerum!</p>
+
+                <div class="footerbox">
+                    <h1>10k+</h1>
+                    <h1>214</h1>
+                    <h1>12M+</h1>
+                </div>
+                <div class="subfooter">
+                        <p>Comments</p>
+                        <p>Paid Users</p>
+                        <p>Views</p>
+                   </div>
+
+            </div>
+
+            <div class="rightbox">
+                <img src="./images/Designer1.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

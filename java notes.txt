@@ -1,0 +1,1316 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>28/08/2024 form validation react
+1)add 2 dependancy 1)npm i formik used for formvalidation   2)npm i yup used for 
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>21/8/24 react routing map() 
+hmr  means hot module replacement
+***Note:-*** json data ke key "" me aate he and js ke format me key "" me nahi rahte simple rahte he
+
+steps for routing one page to other page:-
+1)npm i react-router-dom //install
+2)in react <a href=""> replace by <Link to="">
+3)we use Link need to import {Link} from 'react-router-dom' 
+4)jo file me ham logic write karna he usfile me import {BrowserRouter,Routes,Route} from 'react-router-dom';
+5)after import take first paired tag <BrowserRouter></BrowserRouter>
+6)in BrowserRouter tag take <Routes></Routes> and in the Routes tag take one more tag like component <Rout path="valueof passbyto in Link" element={<>component_name</>}/>
+json data ke liye fakeapi website open this website https://fakestoreapi.com/products and copy all data and past on json to javascript converter
+https://www.convertsimple.com/convert-json-to-javascript/ then copy this 
+in the app we use bootstrap need install dependancy npm i react-bootstrap bootstrap
+and import in the main.jsx import 'bootstrap/dist/css/bootstrap.css
+
+callback function :- in function we call another function like map(show) in this ex show is another function
+map() is used in list of elements
+in the map one single ine code write in () and multi line code write in {} like map((variable,index)=>{<li key={index}></li>}) jab ham {} use karte he tab return ke baad html tag
+map((varaible_name jisme store karna he )=>())
+ex fruits.map((fruit)=>(clg(fruit)))
+spread operater 3dot ...fruit,jo element add karna he :- ...fruit,apple,mango
+if we use map() in <></> react fragment for display then we required key
+ex {
+    fruit.map((fruit)=>(<h1 key=(map.random())>i like {fruit}</h1>))
+    }
+
+filter() used for filter element by condition (jo element condition true ushe  display)
+ex listname.filter((n)=>{
+    return n%2
+})
+To properly use multiple class names in a React component, 
+you need to ensure that the classes are correctly concatenated. Here's the corrected code:
+<button
+  className={`${props.bgkolor} ${props.btnstyle}`}
+  onClick={props.clickon}
+>
+  Button Text
+</button>
+also we will pass default value to Button like
+Button.defaultProps={
+    bgkolor='blue';
+    text='default_textuany',
+};
+
+map fuction doesn't support.
+javascript me agar paraghar ke some word dika ke aage ... esa karna he to .supstring(0,100)
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>20/8/24 experttype in react
+in the react javascript code write in {} and 
+in react component ko css dene ke liye className=''
+hooks:1)useState 2)useeffect:- useEffect(()=>{write console javascript completed},[define states ])
+
+hooks:-1usestate:- this is similar as globle variable one variable used entier project by using usestate() and we define value in the ().
+ex:-const [counter,setcounter]=useState()// it need to import
+ counter is a variable used as globle. set is method (setvariable_name) useState is a hooks and in the (declaire intial_value)
+
+without using props we pass direct properties in{} like ({clickon,bgkolor,text,icon})
+only one button(or any) component create and reuse this 
+import React from 'react'
+import './Button.css'
+const Button = (props) => {
+    
+  return (
+    <div>
+        <button className={props.bgkolor} onClick={props.clickon}>  // this is html tag button
+          {props.text} 
+          {props.icon}
+        </button>
+    </div>
+  )
+}
+export default Button   //in the byName export this line not write we write export key word befor component name 
+
+in the react component export two types 1)default 2)by name
+1) export default
+in the default export we import any name to other file like import any_name from "./file_name"
+
+
+2)by name
+in the by name export we export nameofexporte and we import to other file like this import {nameofexporte} from ./filename
+import in {}this
+
+props means properties
+in the react app we will add ico but need to install lib in terminal type this-- npm i react-icons
+search on google react icon and choose 
+import this icon code
+in the app add icon in component like <icon_name/> 
+
+2)useeffect:- useEffect(()=>{write console javascript completed},[define states ])
+useEffect(()=>{
+    //jo bhi console me display karna he o ya pe 
+},[])   // []ye agar empty rahta he to console me 1bar display honga load hone pe agar ham usme state pass karte 
+jaise [usestate_any] tab jab jab o state me change hongi tab ho console me display hongi
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>16/8/24 19/8/24 react app setup
+(in the react index.html mapped with main.jsx and main.jsx mapped with app.jsx so we work in app.jsx)
+(in the react component ka name always strat witch capital latter and create seprate folder for each component)
+(each component create two file .jsx and .css create by developer )
+(in html boyler plat -! same as in react jsx file me "rafce" used for component boylercode)   
+(main.jsx is main file of project every component call in main.jsx  in the jsx file after rafce creted function in this function we need empty tag like this <>html code here </>)
+
+1)install node 
+2)open website react https://react.dev/learn/start-a-new-react-project then search by ctrl+f vite and click on then click get stated 
+3)open vscode and open prject folder open terminal then past this:---npm create vite@latest projectname then enter 
+4)give the project name then enter then give the package name enter then select react by updown arrao then select only javascript.
+5)type this given cmd each by each cd just click tab key then suggest folder name then npm i for used install dependancy npm run dev used for run the project in browser
+6) after executing 3 cmd in terminal provide a link click this link then app is start on ur browser
+
+after app is start coding:-
+1)go to scr folder create one folder for userdefined component in this folder create component with capital name start
+2)each component has two file .jsx .css then goto app.jsx and call this component
+3)in .jsx file import .css file:- 
+4)we also use boostrap in our project by add link of this in index.html file :-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+5)we can also use inline css like this :- style={{display:'flex'}}
+
+how to create user defined component in .jsx:- type rafce then click enter then automatically give the boylerplate code
+it will provide this code 
+import React from 'react'
+const App = () => {
+    //in this session write plane javascript logic 
+
+  return (
+    <div>
+      in this session write code for creating user defined component
+    </div>
+  )
+}
+
+export default App
+
+component ko mai.jsx me add kare yato main.jsx me app ko call hota hi he by default to appme hi all component call kare like <component_name/>
+after return give react fragment like <> components </> 
+in the project we used all img store in public folder(is alredy existed) in project
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>14/8/24 file handling
+jab tak file me EOF nahiread hota tab tak o file ko read karta
+in file handling System streams in java divied into two type
+    1)byte stream:-used for audio file
+    2)char stream:- used for text file
+
+
+    1)byte stream :- classified into two type:-1)input:- this file name end with inputStream
+                                                2)output- this file name end with outputstream
+
+    2)char stream :- classified into two types:-1)input:- this file name end with 
+                                                2)output- this file name end with 
+create folder steps:-
+1)create one java class and write a main method 
+2)in the main method write this code for object creation File f1=new File()//then ctrl+shift+o for import
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>12/8/24 jwt(JSON web token)
+in token there 3 parts part1)algoritham (header)
+                        part2)payload(DATA)
+                        part3)verify signature
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>8/8/24(reusme points)
+add following points 1)java patterns  2)postman api testing 3)jwt 4)Maven build
+controller used for view display RestController used for json object(only info not in reusme)
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>7/8/24 springboot security
+@builder dene se class ke jo chahe DM ka constructer banasakte he object.builder() dene ke bad .DM1 .DM2
+
+step
+1)add dependancy 
+2)create 1 package in src/main/java and create java class
+3)and this java class extends WebSecurityConfigurerAdapter
+4)in class create 2 methods by ctrl+spacebar then select configure(auth)
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>6/8/24 userinput-insert update delete by html
+steps for create UI
+
+agar controller ke end points se dusre wale end point ko send karna he to return "redirect:/endpoint_name"
+
+1)add dependancy "thymeleaf" in pom.xml in dependancy tag (search on google thymeleaf dependancy Maven)
+2)create html file in templates it present in src/main/resources
+3)
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>5/8/24 display data  delete data in springboot
+@getmapping---display, fetch data
+@postmapping---insert data
+@putMapping----update data
+@deleteMapping-----delete data
+
+
+in repository interface we write a code for user choice query is called a netive query like as followes
+
+@Query(value="write a query",nativeQuery=true)
+List<Student>findsudentByname(String student)
+
+select * from Student where name like ?1;   1 means index of parameter
+or we use also JPA methods  ----------->object findBycoloumnamemethodname(datatype variable) ===== List<student>FindByPerGreaterthan(double a)
+//	@Query(value="select * from Employee where salary > ?1",nativeQuery = true)
+//	List<Employee> findbysalary(double empsalary);                      or we use this types of code 2line code replace one line-	List<Employee> findBysalaryGreaterThan(double empsal);
+this function on this website---https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
+this steps from new project
+1)create a new project Maven on spring initializer webside add dependancy there and dowload
+2)open this poroject in eclipse and set jdk version and springboot v-2.6.0 in pom.xml check 5 dependancy(devtool,jpa,mysql,web,lambok)
+3)in src/main/resources application.properties file me port set karne ka 8085
+4)database connection code 
+5)goto src/main/java create 4 package 1controller 2model 3 service 4 repository
+6)in the packages create classes and each class define @controller/RestController @service @repository and model class @Entity
+7)in controller class create serviceclass object and @Autowired same as serviceclass @Autowired with repository
+8)for display information create method in controller and call serviceclass method
+9)in the serviceclass controllerclass me jo method call huyi he ush method me coding
+* @GetMapping used for display
+10)in controllerclass @GetMapping("/hitpointany") public returntype method_name(){coding}
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>2/8/24 postman API creation
+all steps word file in laptop
+setps
+1)open app click on collection and click on '+' select blank collection
+2)give any name on your choice and click on three dots and select 'add request' then type localhost:portnumber/hitpointname
+3)hitpointname as its give to request name in postman app
+4)set post method click on send
+
+*)steps to insert user input in db by springboot
+1)create one controller class and create one hitpoint as below
+@PostMappingMapping("/hipoint")   //@PostMapping used for insert data from user @RequestMapping("/") used for insert data by developer(program me hi data set karne ka)
+2)create a function:- public String function_name(parameter pass ){
+ create a object entity class
+ obj.setdatatype(localvariable)
+ obj.setdatatype(localvariable)
+ obj.setdatatype(localvariable)
+    return anything u required;
+}
+3)goto service class define method and there code
+there are three ways to pass data 1)Pathvariable 2)RequestParam 3)RequestBody
+1,2 me pass data member 3me object pass hota he
+
+RequestBody use karte samay function me only @RequestBody class ka object ex:- @RequestBody Student s2
+postman me new request then in respons goto body and select row then pass key value  url hitkarne karneka
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>1/8/24spring boot application database connection and create table insert values
+all steps in laptop word file
+in spring boot frontend se data pass karne ke liye 3ways he:-1)Requestparam 2)PathVariable 3)RequestBody
+in spring boot frontend--->controllerclass--->serviceclass--->repositoryinterface--->DATABASE
+in spring autosvae dependancy use "devtols" it present in word file 
+1)create a POJO class in model package(anyname.java)
+2)in pojo class noarg constructer all arg constant, setter getter ,toString all are set by using lambok 
+        @Allargcontructor @noargcontructor  @Data(in data annotation setter getter and toString included)
+3)in pom.xml add related dependancy in dependancy tag 
+4)in srec/main/resources in application.properties add database related settings following code after server=8085
+(        spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+         spring.datasource.url=jdbc:mysql://localhost:3306/excelrinfo
+         spring.datasource.username=root
+         spring.datasource.password=root
+         spring.jpa.hibernate.ddl-auto=create                   //(create used for 1st time or fresh table create or update used for alredy existed table perform operation)
+         spring.jpa.properties.dialect.hibernate = org.hibernate.dialect.MySQL8Dialect
+
+)
+5)in pom.xml add dependancy related to database (https://mvnrepository.com/ from this website any dependancy add from)
+6)in model package we created one pojo class this pojo class create table in DB by using hibernate properties @entity(this is import from javax.persistence and add jpa dependancy)
+7)in the pojo class give DM and give the @id for primary key @GeneratedValue(strategy=Generationtype.identity) for auto_increament
+8)jitne bhi model package me entity class(pojo) banate he una sab ka controller class service class and repository interface banana.
+9)in repository create one interface and extends JpaRepository<arg1,arg2> //JpaRepository take two arg: arg1 me class_name arg2 me type of primaray key wrapperclass ex Integer,String
+10)in service package create class name as entityclass same in class above class name give @service same as all @repository and @RestController/Controller
+11)in controller class pass data from using 3way any one use controllerclass ko serviceclass ka object lagta he isliye controllerclass me @autowired serviceclass_name variable_name
+12)
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>31/7/24spring boot application creation
+1)right click on project create 4 package on alredyexisted package in java src 1)controller 2)model 3)repository 4)service
+2)Configure the application.properties file in the resources folder  server.port=8085
+3)in the controller package make the controller class(any name.java) @RestController/@Controller
+4)start ur coding 
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>30/7/24spring boot
+steps for spring boot application
+1)setup online
+            1)search on google "spring initializer"(https://start.spring.io/)
+            2)on this webpage select project "Maven" language "java" spring boot "3.3.2"
+            3)on this same page give the project name in front of group and give the artifact 
+            4)description give ur description any ur choice
+            5)select jar and java version
+            6)add dependancy by click on dependancy and simple program ke liye "web"
+            7)click on GeneratedValue
+2)extract the zip file 
+3)then opne eclipse and click on file and click on opne project from file System
+4)then brows this folder(zip extracted) 
+5)setup completed
+6)in eclipse expand the project and open pom.xml file(and check spring boot v and jdk version)
+7)in pom.xml set version spring framework line no7 2.6.0 and java version line no30 1.8 save project and clean project(goto project click on clean)
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>25/7/24 hibernate(one to one, one to many, many to many relation) 
+two tables relation in hibernate
+1)1:1:- 1)unidirection
+        2)Bidirection
+2)1:M
+3)M:M
+@Embeded used for join two tables
+@onttoone oTO relation in two table
+@joincoloum(name=anynamefor coloum)
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>24/7/24  hibernate database table create
+@entity then class name  -- create table in DB as class name
+@id  used for primary key 
+@Embeded used for join two tables
+@GeneratedValue(strategy=)                      
+
+interview question get and load method 
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>23/7/24  hibernate
+hibernate is a object relational mapping(ORM).
+its non invasive (non invasive means it desnot need to implement any other class or interface)
+in hibernate session same as jdbc connection
+session is created by sessionfactory
+ session has its own cache memory (it required close ex session.clear() session.close())
+cache store barbar use hone wala data store karta he
+2nd level cache 
+
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>22/7/24 spring MCV(model view controller)
+mvc project run from main project nameright click then run
+
+steps in world file in laptop 
+      1) create dynamicweb project
+      2)add jar file in webinf/lib folder (in laptop spring folder part1 part2)
+      3)add 2xml file in webinf(in laptop day3 spring folder copy past  beacause mapping code in 2files)
+      4)create 2 package in java/src 1)com.excelr.controller 2)com.excelr.model(package name as per u choice)
+      5)create one folder in webinf name as view(beacuse in springmvc.xml file alredy mention a path)
+      6)create .jsp file in view folder(.jdp alredy defined in xml file)
+      7)create java file in controller package (Mycontroller) in class give the annotavtion to class name like @controller above the line of class name
+      8)@RequestMapping("/anyjspfilename")above line declaire a function and function return type your jsp file name is imp . we wil give mutiple heatpoint to one single page (@requestMapping(value={"/","/anyname","/anyname"})  like this)
+      9)in controller java class befor class name give controller word with annotation like this @Controller
+
+
+model is Transaction between view and controller  (view and controller ke bich data jo data transfer hota he ushe model bolte)
+view means presentation layer(customer is see) its a frontend
+controller means routing(send request to other page) it doesn't contain business logic controller means same as webconfig.xml as servlet
+in controller class controller scan the class and search the requestMapping(/request) then send the function
+two types of controller :- 1)only Constroller
+                            2)RestController
+
+1)only Constroller it return html or jsp. it check return type stringname present in view 
+ 2)RestController it return JSON(JavaScript Object Notation) Format data 
+frontend to backend ko data request send kar na he to:-1)@ModelAttribute()
+
+
+backend to frontend ko data send karna he to :- 1)Model its used for single value  
+                                                2)ModelMap its used for multi value
+                                                3)ModelAndView its usd for view display
+1)model ex:- public string method_name(Model m)//(model_type variable)
+{
+    m.AddAttribute("frontend_value","backend_value");
+}
+2)ModelMap ex  public string method_name(ModelMap m)//(model_type variable)
+{
+    m.AddAttribute("frontend_value","backend_value");
+    m.AddAttribute("frontend_value","backend_value");
+    m.AddAttribute("frontend_value","backend_value");
+}
+
+3)ModelAndView:- ex  public string method_name(){
+    ModelAndView object=new ModelAndView()
+    object.setviewname(viewname)
+    object.addobject("frontend_value",new passing value to other class_object).
+}
+
+frontend se data lene ke liye 
+public string savedata(@ModelAttribute class_name variable ){
+ variable.anyproprty;
+}
+front end me form tag ko @ModelAttribute="backendse aya huo object"
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>19/7/24 spring core(type casting)
+there are there dependencyinjection:-
+1)constructor dependencyinjection
+2)setter di
+3)autowired
+then 3rd type here:-
+
+in bean no scope no autowire only in main class use following steps
+it is similar as CDI or SDI but only declare autowire with annotation like @autowire 
+jo class dependancy he us class ke uper @autowired
+
+jab tow or more bean he to jo use nahi karne ka us bean ko autowire-candidate="false' dene ka. OR
+ya to class me ja @autowired he uske niche @Qualifier(id of bean)
+
+
+POJO stands for Plain Old Java Object. It is a term used to describe a Java class that follows simple conventions and does not depend on any specific frameworks or libraries. A POJO typically contains private fields with corresponding getter and setter methods, and it may also include additional methods for behaviour
+
+in dependancy class data member also use array, list,set,map are as followes
+private String OrderPetrolCar[];
+private List<String> OrderDieselCar;(in java claa we create setter getter)
+in bean <property name=DM><list><value1><value2><valuen></list></property>(same as Array,List,Set) but
+<property name=Dm> <map><entry key="keyname" value="valueofkey"></entry></map></property> (used for Map )
+
+
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>18/7/24 spring core (bean tag and there attributes of bean)
+
+bean tag attribute:-
+1)id
+2)class
+3)scope :-    1)singleton (default)
+              2)prototype
+4)autowire
+5)autowire-candidate
+
+
+jab driverapp.java me main method me ClassPathXmlApplicationContext ka object bana te he 
+tab IOC container scan karta he xml file ko or class ka object bana ke rakhta he by using no arg constructor.
+
+(jab apne ko class ka object or data member display karne se pahile usi class me kuch or operation ya display karna hoto us class me
+no-Argument constructor banye fir us constructor me jo pahila operation/display karna he o type kere in constructor(no-arg)  
+scope="singleton" it is default scope and will be only one single object all the refernces it call constructor only one time at that time when loading of IOC container
+and 
+scope="prototype" it call constructer every time when object request to bean.
+scope="singleton" dene se main class me jab object create karte he ClassPathXmlApplicationContext tab yo bean file ko scann karta jab ushe scope singleton milta
+tab o us class ka sabse pahile no-agr constructor call karta badme main class me jo code he o run karta
+)
+
+
+scope="prototype":-ClassPathXmlApplicationContext ka object bane ke bat jab dependency class ka object call karte he tab hi o no-arg constructor 
+autowire jab dependency aati he tab ham non-primitive data member pass karte he tab bean me o ref se pass karna padta nahi because by using autowire
+4)autowire=1)byName
+           2)byType
+beans me agar hamne non-primitive data member nahi declaire kiye hoto o apne aap detect karleta he(ioc engine)
+(ki o data member ka bean hekya scann karta he or value pass karta he) or object ko value pass karta he.
+
+autowire="byType" dene se dependencyinjection khud manage karleta(non-primitive data memberko value pass karta he) 
+he developer ko reference dene ki jarurat nahi he 
+
+autowire="byType" karna he to jis class ko karna he us class me 1constructor banane ka with primitive data member ka.
+(agar one se jada same name ke bean he to jo use nahi karne ka ushe autowire-candidate="false" karne ka)
+
+autowire="byName" me bean ki id ko hi o data member ka name dena he direct access hote he non-primitive DM.
+
+beanfactor object call karne pe constructor invoke hota he ushe close bhi karna padta he means destructor
+destroy karne keliye following code use hota he
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>17/7/24 dependencyinjection  IOC container
+IOC container main task is dependencyinjection (dependency means one class dependant on other class)
+types of Dependency injection:-
+there are there dependencyinjection:-
+1)constructor dependencyinjection
+2)setter di
+3)autowired DI
+
+
+steps to create spring application
+1)create a simple java project
+2)import jar file to project part1 and part2(this file store on laptop spring folder)
+3)create 1folder and 2 package in 1 folder create beanconfig.xml file.
+4)this two package name is 1)com.excelr.entity 2com.excelr.app
+5)in the com.excelr.entity create sub java files(java class)  and in com.excelr.app create DriverApp.java
+6)in beanconfig.xml file type this code in beanconfig.xml:-
+                    <beans  xmlns="http://www.springframework.org/schema/beans"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns:context="http://www.springframework.org/schema/context" 
+                    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans.xsd
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+                    </beans>
+
+7)in beans create one pair for one java class <bean> </bean>(this pairs create in beans before closing tag)
+8)<bean> </bean> pair used for create object of class IOC container fetch the details from this bean
+(*)bean tag with attribute id,class (in bean tag give any id but class is path of sub java class ex class="com.excelr.entity.Engine")
+(*)in this bean inject the data using constructor and setter getter
+so we can use constructor 
+9)in <bean> <constructor-arg></constructor-arg>  </bean> and pass the constructor attribute like this as followes (then IOC give the objecto f this class without using 'new' keyword)
+  <bean id="e1" class="com.excelr.entity.Engine">
+      <constructor-arg value="15"></constructor-arg>                 // this bean only primitive data datamember
+      <constructor-arg value="Toyota"></constructor-arg>
+      <constructor-arg value="1500"></constructor-arg>
+  </bean>
+  <bean id="e1" class="com.excelr.entity.Engine">
+      <constructor-arg value="15"></constructor-arg>                // this bean is combination of primitive n non-primitive 
+      <constructor-arg value="Toyota"></constructor-arg>           // primitive call by value n non-primitive call by reference
+      <constructor-arg ref="e1"></constructor-arg>// this is call reference
+      <constructor-arg ref="g1"></constructor-arg>//give the id of object in bean
+  </bean>
+
+10)go to driverapp.java file and type code in main method :-ClassPathXmlApplicationContext beanfactor = new ClassPathXmlApplicationContext("beanconfig.xml");
+ //ClassPathXmlApplicationContext anyobject= ClassPathXmlApplicationContext(xml file)
+11)after this code object,getbean(id of bean,class name of which class object.class) ex:-beanfactor.getBean("e1",Engine.class);
+12)this object store any variable and then sout(variable) for print
+
+
+                                                                    OR
+step number 9 is other way in bean we use <property><value> pair getter-setter 
+<bean id=anyname class="path of class.class_name">
+    PASSING REFERENCE USING SETTER
+      <property name="engine" ref="e1"></property>
+
+PASSING REFERENCE USING CONSTRUTOR
+     <constructor-arg ref="e1"></constructor-arg>
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>16/7/24 jsp library
+jsptl:- jsp standard tag library 
+
+jstl use karne ke liye jar file :-http://www.java2s.com/Code/Jar/j/Downloadjstl12jar.htm#google_vignette
+
+jstl code use karne ke liye taglib url="
+
+
+
+in jsp only one page access attribute then pageContext.setAttribute
+and hole application access then application.setAttribute()
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>15/7/24 jsp file creation and database connection
+java comments code by // multi commentds  /*   */  html <!--  -->  
+jsp:-
+ create file same as servlet 
+ but html file name index give
+
+ action method=post
+ in jsp file java code write within this tag <% java code %> its called java scriplets
+
+in jsp does not need PrintWriter it provide out in build method ex out.print
+
+java scriplets type 5
+    1)basic <% %>
+    2)Declaration scriplet <%! int a=10; %> // a can be accesible to hole page 
+    3)expression scriplet   <%=  code%> // it used for small java code in html tag ex <h1> addition is:<%=add()%></h1>
+    4)             <%--  %>
+    5)directive scriplet
+                  i)page    <%@  %> // its used for import ex <%@ page import="java.util.*"%>
+                 ii)include <%@ include file="home.html" %>   another html page include in other page 
+                iii)taglib  
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>10/7/24 java servlet day3(servlet session management ,jdbc)
+session management
+    1)https session
+    2)cookie
+    3)hiddenfiedl
+    4)url rewritting
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>9/7/24 java servlet day2
+in application only one servlet then we mapping using @webservlet("action_name")
+
+but in application multiple servlet then we use web.xml file for routing 
+
+in the web.xml file two pairs:1)servlet 2)servlet-mapping
+
+    1)servlet tag <servlet> 
+                    <servlet-name>name</servlet-name>
+                    <servlet-class>class_name(java class name)</servlet-class>
+                  </servlet>
+    2)servlet-mapping tag <servlet-mapping>
+                                <url-pattern>/action_name</url-pattern>
+                                <servlet-name>name</servlet-name>
+                          </servlet-mapping>
+
+in the application web.xml file always create in webcontent--->>webinf
+and servlet create in java resources
+
+in the servlet suppose if condition--->if condition is true then use forward method else include. its called as RequestDispatcher
+
+forward is used for routing(send to other page) in application.
+
+sendRedirect is used for routing(send to outer page) outside to application
+
+application run on server then which file 1st run deside by Welcome-file tag  this tag in xml file
+
+            <welcome-file-list> 
+               <welcome-file>login.html</welcome-file>
+            </welcome-file-list>
+
+in other programming language local variable globle variable like this context-param  is a globle variable
+
+
+local variable declare in servlet for example 
+    <servlet>   
+       <init-param>
+           <param-name>name</param-name> 
+           <param-value>value</param-value>
+        </init-param>
+    </servlet>
+
+
+globle variable declare outside to servlet within the root tag(web-app)
+
+<context-param>
+<param-name>name</param-name> 
+<param-value>value</param-value>
+</context-param>
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>8/7/24 java servlet
+servlet is combination of server + scriplet
+
+scriplet is some instructions
+
+webserver/application server(app server)
+
+
+how to create a project
+            1)create web dynamic page
+            2)add server by click on window then server then select version
+            3)set server to right click on project goto property and set server
+            4)create a new servlet right click on project click on servlet type any name to give servlet
+            5)create html file in html file take form tag then give the form tag action="anystring"
+            6)this anystring pass to the servlet by in servlet file name for anystring(only for single servlet)
+            7)in servlet file goto doget method and remove privious code and type new code
+            8)first set response type by type this code ----->response.setContentType("text/html");
+            9)set printWriter pw=response.getwriter() 
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>1/7/24 jdbc
+in db there two types of querys 1)static 2)dynamic
+in static data is alredy know (means which data and which operation on data)
+
+in db there are two types of statements 1)select 2)non-select(DML)
+
+jdbc methods:-  1)executeQuery() its used for select statement
+                2)executeUpdate used for non-select statement(DML) {executeBatch()}
+                3)execute() its void doesnot return any value(DDL command create,ALTER,drop,trancate)
+
+
+                1)Resultset():- its used for display mutltiple data it is static query 
+there are 3 types statements in jdbc:-  1)statement   its used for static query (insert,)
+                                        2)PreparedStament used for dynamic query
+                                        3)CallableStatement used for store procedure in PLSQL
+
+
+Statement :-Purpose: To execute simple SQL queries without any parameters.When to use: When you need to execute a simple SQL query that doesn't need to be reused.
+
+ex Statement stmt = connection.createStatement();
+   ResultSet rs = stmt.executeQuery("SELECT * FROM employees");
+
+PreparedStatement: Purpose: To execute parameterized SQL queries. Provides protection against SQL injection and allows reuse of SQL statements.
+When to use: When you need to execute the same query multiple times with different parameters.  
+Connection con=DriverManager.getConnection(url,user,password)           
+String sql = "SELECT * FROM employees WHERE id = ?";
+PreparedStatement pstmt = con.prepareStatement(sql);
+pstmt.setInt(1, 101);
+ResultSet rs = pstmt.executeQuery();
+
+multiple data display karne ke liye rs.next() and while(rs.next()){display sout}//multiple data ke liye
+first record display nahi karna hoto rs.first()
+only particular data display karna hoto rs.absolute(row_number)
+
+                                statement                                                           PreparedStatement
+     1)position of quesry   anywhere(befor statement or after statement)                      befor query then statement
+     2)
+
+
+step to connection java to mysql
+    1)dowload mysql connector jar on offical web-suitable
+    2)opne eclipse-->right click on the project name--->build path--->configure buildpath--->libraries-->add external Jar
+    3)create a java class
+    4)register and load the driver:- Class.forName("com.mysql.cj.jdbc.Driver"); // cj used only mysql v8.0
+    5)type this code for establish connection:- Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/student_data","root","root");
+    6)create query 
+    7)create Statement:- Statement st = con.createStatement();  or PreparedStament ps=con.prepareStatement
+    8)execute the query  st.execute(query); 
+    9)close statement and close connection :-  st.close() and con.close()
+
+                                     or
+
+step to connection java to mysql(corporate way)
+1)1  to 3 setps same
+2)register & load driver i)String driverName="com.mysql.cj.jdbc.Driver";
+                        ii)String url=jdbc:mysql://localhost:3306/;
+		               iii)String database="excelrinfo";
+		                iv)String userName="root";
+		                 v)String password="root";
+
+3)6to9
+
+multiple data insert st.addBatch(inert q1);
+                     st.addBatch(inert q2);
+                     st.addBatch(inert qn);
+                     st.executeBatch();
+
+
+यदि आपने JDBC में किसी संसाधन (जैसे ResultSet, PreparedStatement, या Connection) को प्रारंभ करने से पहले null दिया है, तो आपको उसे बंद करने की आवश्यकता नहीं है। 
+यदि आप ऐसा करते हैं, तो यह एक NullPointerException का कारण बनेगा। 
+इसलिए, किसी भी JDBC संसाधन को बंद करने से पहले यह जांचना महत्वपूर्ण है कि वह null नहीं है।
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>27/6/24 DATABASE plsql
+
+                                                                PLSQL program
+                                                                     |
+                                                                     |
+                                                                     |
+        1)function                 2)procedure                  3)cursor                     4)trigger       5)package               
+        :-one row one column        :-one row multiple column   :-multi row                   befor event      collection of 1 to 4
+          output he to use karne ka                              multi/single column          after 
+ 
+ 
+*)plsql me display karne ke liye:- dbms_output.put_line(variable name)
+*)show Errors se error dikte
+plsql me equalto ko := use karne ka
+
+
+plsql program syntax
+      1st declare //only declare keyword .
+      2nd           // declare variable and datatype.
+      3rd begin    // only begin keyword.
+      4th          // logic.(Query)
+      5th exception //if exception occuer then write below .
+      6th  
+      7th end
+
+example :- display the student_data where id is 5 using plsql.
+
+Declare                                                           or                      Declare
+customer_name varchar(10);                                                                name  customer.name;
+begin
+select name into customer_name 
+from customer where id=5;
+
+dbms_output.put_line('customer Name is:-'||customer_name);
+end;
+
+-20000 se -210000 ke range me error code dene ka in exception handling
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>26/6/24 database assignment
+
+select distinct column name from ...   /use karne se dublicate values display nahi hote. 
+
+// import karne ka tarikha 
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+mysql> show databases;
++---------------------------+
+| Database                  |
++---------------------------+
+| ajppratical               |
+| customermanagementsystem1 |
+| employee                  |
+| excelr_assignment         |
+| excelrinfo                |
+| information_schema        |
+| mysql                     |
+| performance_schema        |
+| sakila                    |
+| student_data              |
+| studentmanagementsystem1  |
+| sys                       |
+| world                     |
++---------------------------+
+13 rows in set (0.00 sec)
+
+mysql> use excelr_assignment;
+Database changed
+mysql> source D:\Excelr practice program\sql\assignment cmd.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 16 rows affected (0.03 sec)
+Records: 16  Duplicates: 0  Warnings: 0
+
+mysql> show tables;
++-----------------------------+
+| Tables_in_excelr_assignment |
++-----------------------------+
+| category                    |
+| customer                    |
+| orders                      |
+| product                     |
+| rating                      |
+| supplier                    |
+| supplier_pricing            |
++-----------------------------+
+7 rows in set (0.03 sec)
+
+mysql>
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>25/06/24 database day4 many to many , normalisation
+types of attribute :-1)identity attribute
+                     2)composite attribute
+                     3)derived attribute
+                     4)multivalued attribute
+                     5)
+
+
+1)one NF:- only one value each column is called one NF
+
+2)two NF:-noe NF + no partial dependency 
+
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>24/06/24  database  candidate key, primary key, foreign key, join one to one, one to many
+
+
+
+primary key:- null nahi hoti kabhi
+
+
+candidate key:-
+
+
+foreign key:- one table primary key join to another table
+
+join:-1)full join
+      2)cross join
+      3)inner join(default // jab only join write kare to by default): it display only matching column
+      4)left join
+      5)right join
+      6)self join
+
+inner join :- only matching record display. (same time another table double then 1st row 1st roe then 1st row 2nd row then next 2nd row of 1st table)
+left join:-left join me jo column match nahi hota usme null display
+sql file ko cmd me import karna he to:1)copy path of file 2)open cmd and type 'source path of file filename'
+
+
+
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>21/06/24  DATABASE &&(ALL) ||(OR) nested Query
+delete mentain log but truncate no 
+
+
+
+select ename from emp_details where city like 'pune' ;
+
+
+                                (starting index,length)
+select ename from emp_details limit 2,4;// onlu this record display     (starting index,length) alway start from zero count
+
+select ename,sal from emp_details order by sal desc;// display desending order
+select ename,sal from emp_details order by sal desc limit 0,3; //top 3 display
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>20/06/24 DataBase Arithmatic functionin mysql ,groupby
+Arithmatic function mysql:-
+
+
+aggregate function:- min(),max(),avg(),sum(),count(*);   " * used for check all column 
+ 
+       1)count():- select gender,count(*) as Number_of_Emp from emp_details group by gender;// coulmn name me space dena he to ' ' ke ander dene ka  or  select gender,count(*) from emp_details group by gender;
+       2)sum:-     select gender,sum(sal) from emp_details group by gender;
+       3)min():-
+       4)max():-
+       5)avg():-
+having used for filter in groupby.
+where used for filter in select.
+
+ select column$,aggregate_function() as new_columnname from table name group by column$;
+  jo data select from se milta he ushe filter karne ke liye WHERE use karna he.(jo bhi data milta usme varchar  he to like '' use karne ka or number hoto =)
+  jo data groupby se mila he uspar filter laga na he to "HAVING" use karna he :-12:32
+
+groupby:- in groupby also used aggregate_function .
+
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>19/06/24 DataBase Commands DDL and DML
+1)DDL:-Data Defination Language:- A)create. create table cmd:-CREATE TABLE `excelrinfo`.`excelrstudent` (
+                                                                                        `id` INT NOT NULL,
+                                                                                        `Name` VARCHAR(45) NOT NULL,
+                                                                                        `Batch_time` VARCHAR(45) NOT NULL,
+                                                                                        `Joining_Date` DATE NULL,
+                                                                                        `Paid_fees` VARCHAR(45) NULL,
+                                                                                        `Total_fees` VARCHAR(45) NULL);
+
+                                  B)alter( i)add ii)modify iii)drop)   i)add column into table:-ALTER TABLE `excelrinfo`.`trainers` 
+                                                                                                ADD COLUMN `Job_roll` VARCHAR(45) NOT NULL;
+
+                                                                      ii)modify table:-ALTER TABLE `excelrinfo`.`trainers` 
+                                                                         CHANGE COLUMN `Ename` `EMP_fullname` VARCHAR(15) NOT NULL ;
+
+                                                                     iii)drop column:-  Alter table excelrinfo.trainers
+                                                                                        drop column job_roll;
+                                                                                    
+                                  C)Rename(used for table name change):-Rename table excelrinfo.trainers to excelrinfo.Staff_Detail;
+                                  D)truncate:- delete all table data :-Truncate table excelrinfo.staff_detail;
+                                  E)drop:- delete holl table:-         drop table staff_detail; 
+
+2)DML:- Data Mannipulation Language:-A)insert:- insert data in table:-              insert into staff_detail(id,EMP_fullname,gender,salary,age)values(0,'abhishek','male',1200,39); or insert into customer values(7,'sham','m',7946130258);
+                                     B)delete:- delete a particular data in table:- delete from table name WHERE condition; ex:-delete from emp_details where id=12;
+                                     C)update:- update A particular data in table:- update table_name SET column_name=value,column_name=value where condition; ex:-update emp_details set ename='salman khan',sal=28000 where id=1;
+                                     D)select:- select * from emp_details where gender like 'male';
+
+in view change any value then change 
+create view view_name as select column_name,column_name from tablename
+
+modify view:-create another view 
+    
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>18/06/24 garbageCollection DataBase
+after use of object /function/operations collect by garber 
+
+2way to invoke the GC 
+1)System.gc();
+2)Runtime r1=new Runtime.getRuntime();
+r1.gc(); or Runtime.getRuntime.gc()// its faster
+
+
+method of object class:
+1).equals()
+2).toString()
+3).hashcode()
+4).finalize()
+5).clone()
+
+
+SQL(Structured Query Language) :-1)DDL:-Data Defination Language(only Structure[Commands:-1.create 2.alter(add modify drop)3.drop(permantly delete table) 4.rename 5 truncate(delete all data values only)])
+                                 2)DML:- Data Mannipulation Language(insert update delete)
+                                 3)DCL:- Data Control Language(permission cmd 1.grant 2.revoke[database administrater used this cmd])
+                                 4)TCL:- Transaction Control Language(commit rollback savepoint [transition related])
+                                 5)DSL/DQL:-Data Selection/Query Language(Select)
+
+MySQL Workbench :- provide 2 way 1)GUI access
+                                 2)CMD[a)mysql shell b)mysql command line client]
+                                      a)mysql shell:-1.write \connect root@localhost:3306->Password:root->write any cmd.(ex \show database)
+                                      b)MySQL command line client 1. write connect->type any cmd
+
+*)show databases//used for show all DataBase
+*)show tables//used for show all tables
+*)use database_name:- used for select database
+*)SELECT DATABASE();   used for which database is currently using.( If you haven't selected any specific database yet, it will return NULL.)
+
+
+
+1)create database:- create database database_name;
+
+2)
+
+3)description of table:- desc database_name.tablename;  ex:-       desc excelrinfo.excelrstudent; 
+
+display table data:- SELECT * FROM database_name.tablename; SELECT * FROM excelrinfo.excelrstudent;
+
+table properties:-1.NN:- Not null(requied any value)
+                  2.UNIQUE:- no repeat value
+                  3.primary key:-combination of NN & UNIQUE(no repeat not null value)
+                  4.check:-  check condition[condition:-1)IN(male,female)]
+                  5.default:- set value for this column (agar user value nahi enter karta to default value)
+                  6.auto_increament:-
+
+
+------>>>>>>>>>>>>>>12/6/24day31(Sir) stack map(Hashmap)
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>4/6/24 wrapperclass, collection, ternary Operator
+                      a>b?a:b
+  a>b   ?              a (if condition true display this statement):b(if condition false display this statement)
+
+
+types of string:-1)Alphebetic string- String a="Apple";
+                 2)AlphNumeric string String b="Apple313";
+                 3)Numeric string     String c="313";
+
+
+*)wrapper class:- it convert primitive datatype into non-primitive data type(objects).
+
+*)Autoboxing:-wrapperclass convert primitive DT into class objects is called as Autoboxing
+
+*)unboxing:-wrapperclass convert class object DT into primitive DT.
+ex:- Integer obj=new Integer(a);  it is a non-primitive "a" convert to primitive use "intValue"  int b=obj.intValue();
+
+primitive data type:- we can't invoke any method on primitivetype.
+eg= int a;    a.   (can not work any method)
+
+string to int:- Integer.parsInt()
+
+int to string   string.valueOf(variable of Integer) 
+
+non-primitive data type:- we can invoke any method on primitivetype
+
+int a[]=new int[5]      a.length()
+
+
+collection:- group of heterogenous non-primitive data is called collection
+
+homogeneous:-it is a group of similar datatype for example:- Array in the array we can store only similar datatype data
+heterogenous:- it is a group of different datatype
+
+*limitation of array is advantanges of collection*
+
+                   Array                              collection
+ 1) its homogeneous                      1) its heterogenous 
+ 2)fixed length(size)                    2)variable length(autogroable)
+ 3)no inbuilt support for various DS     3)inbuilt support for various DS(stack,Queue,Tree,Linkedlist)
+ 4)suitable for read operations          4)suitable for inser/delete/update
+
+
+*)collection- chapter name
+*)Collection -Parent interface
+*)Collections -utlity class(it import in java code it include many methods)                               iterable
+                                                                                                            |  (extends)
+iterable estends by Collection extends by sub 3 interface 1)List  2)Queue 3)Set                             |
+                                                                                                         Collection                                                                         Map
+                                                                                                            |  (extends)                                                                     |(extends)
+                                                                                                            |                                                                                |
+                                                                                    1)list                2)Set                    3)Queue                   
+                                                                                        |(implements)         |(implements)         !  |(implements)
+                                                                                        |                  !  |                     !  |
+                                                                                    1)ArrayList            ! 1)HashSet              !  1)PriorityQueue
+                                                                                    2)Linkedlist           ! 2)LinkedHashSet        ! 
+                                                                                    3)Vector               !                        !
+                                                                                        !(extends)         !(extends)               !(extends)
+                                                                                        !                  1)sortedSet               1)Dequeue  
+                                                                                     1)Stack                |                              |
+       List                                        Set                                                      |(implements)                  |(implements)
+1)allow duplicate value                    does not allow duplicate value                                   1)TreeSet                    1)ArrayDeQueue
+2)insertion order is preserved             insertion order is not preserved.(sorted by Hashcode. hashcode is integer as it is but letter hashcode different)
+3)Allows multiple null objects             Allows single null objects.
+4)implements following classes             implements following classes
+  (1.ArrayList 2.Linkedlist 3.Vector)      (1.HashSet 2.LinkedHashSet)
+5)Capacity is 10                           Capacity is 16
+
+
+Stack extends Vector
+Map is not in Collection umbrella because of in Collection add method take single value but map store "key value pair" 
+in map use Put(key,value) method for add the object
+
+method of Collection interface
+ArrayList:-methods
+*)add(Object);//used for add object "it take only one single value"
+*)remove(object o) or remove(int index) // remove object or give the index
+*)get(index)// display value
+*)addAll(object1)  addAll(object2)// add two or more Collection 
+*)retainAll(Collection obj) //only store give object collection and delete all other objects
+*)Size():- display size of list(present elements)
+*)clear():- clear collection.
+*)Capacity():- Capacity of storing elements.(list Capacity 10  if we insert 11 element then Capacity automatically increase by (Capacity*1.5)+1).
+
+
+
+*)List creation  :-  list<datatype> variable=new ArrayList();// eg List<String> s1=new ArrayList()-- tjis list can store only string value;
+                    we can't store any other datatype value.  we put the condition on list by using datatype<>. we put the condition because of we can display easy no need type cast.
+*)list alway display in square bracket.
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>23/05/24 Excepetion handling Errors
+
+types of Excepetion:-
+                    1)Arithmatic Excepetion:- arithamatic function incorrect
+                    2)NumberFormat Excepetion 
+                    3)Input Mismatch Excepetion
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>21/05/24 Abstraction interface access modifier
+
+access modifier:-
+                    public   no restriction  (default)
+                    private  vary restriction
+                    protected
+
+in private class data member and methods only acces within class
+abstract class or interface ka object nahi banta
+interface me jobhi data he o static or final hota he 
+protected its two type :-
+                        1) private protected
+                        2) public protected
+Final :-
+      final data member:- can't change
+      final method :-
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>20/05/24 inheritance (day2) Abstraction day15 method overloading overiding
+normal class:- method and method body
+abstract class:-3methods but only 2method body
+interface    :- only methods no body
+
+
+method overloading:- same function name.
+method overiding:- same function name and same parameter 
+
+in inheritance using super keyword we can call methods,constructor. in child class
+ex:- super.displayinfo()// this is method
+     super.Student()// this is constructor. constructor call on 1st line only 
+
+Data belong to the reference, Method belong to the Object(DRMO)
+  method call karte he only object jis class ka bana ya he o.
+
+DRMO:-means class ka object banate time reference or object esa banate
+            object creation   reference class name variable=new object class name
+            ex                 2 class (father son) he 1 class(son) ka object create karna he to
+                                1st way --son s1=new son()
+                                          father s2=new son()
+                                          object class me ke jitne bhi methodhe o call hute
+                                          reference jis class ka banaye us class me ke only data member call karte
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>17/05/24 inheritance day14
+in inheritance *super class---sub class*,  parent class----child, base class ---- derived class
+types of inheritance in java:-1)single inheritance
+                              2)multiple inheritance(java not support)
+                              3)muti-level inheritance
+                              4)Hierarchical inheritance
+                              6)Hybrid inheritance
+
+1)single inheritance:
+                       super class
+                           |
+                           |
+                           |
+                         sub class
+
+2)multiple inheritance(java not support):- 
+
+6)Hybrid inheritance:- it's a combination of two inheritance
+
+
+using inheritance we can create class object different different class
+for ex multi-level       amitabh   class
+                         abhishek  class
+                         aradhya  class 
+aradhya s1= new aradhya,
+abhishek s2=new abhishek or abhishek s2=new aradhya 
+is tarh
+
+    reference = object
+ex  student s1 = ne student()
+
+
+
+
+----------------->>>>>>>>>>>>>>16/05/24 local static block & static import day13
+
+main method ke outside me object create kare to static keyworduse karna imp he
+main method ke pahile jobhi code run karna he use static block me code write kare
+static block:-
+static{
+    code
+}
+
+Math.abs()
+math.long(100)
+Math.sin(90)
+
+
+import static java.lang.Math.*   karne se harbar "Math."  type karna nahi padta
+
+Recursion:-
+
+Binary Search:- requied sorted list for searching 
+
+Binary search= mid= (first index+last index)/2
+               search element is greater than mid then search from mid+1 to last wisewersa 
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>15/05/24 keywords day 12
+1.Static means shared data
+2.final means constant can't change
+
+static variable shared memory 
+instance variable allocate individualy memory(sepret memory)
+
+
+
+
+
+
+
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>09/05/24
+
+*toString()- its conver to object t string ()
+
+*function ko main method me call karne se hi function work karenga
+
+*constuctor:- constuctor name is same as class name.
+constuctor:- 1)default constructor
+             2)parametrized constructor   eg class student student(int x, int y)
+             3)copy constructor
+             4)No-Argument                eg  class student  student()
+we can create more than one constructor in same class.
+constructor se pahile void keyword nahi lagate.
+
+in default constructor value as followes(null,o)
+default value of DT:-1)int 0
+                     2)double 0.0
+                     3)boolean false
+                     4)string  null
+                     5)char    blank
+                     6)
+
+*Math.abs() this fun used for maths operations
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>08/05/24 introduction to OOPs
+encapsulation
+driverApp class banane ka usme main method banane ka or other class ke object main method me banane ka
+*ctrl+shift+o-- for import other package class to main class
+
+
+*private variable to data assign(write) karne keliye  set method use karne ka
+
+*private variable to data display(read) karne keliye  get method use karne ka
+
+*in eclipse set and get method ko add karne ke liye right click and click on sourse pe jake option he create getter setter method
+ second option direct assign value to private variable and hover on mouse eclipse suggest setter getter.
+
+
+*creation of object in class and outside the class.
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>07/05/2024 fundamentals of oop 
+    1)function:-set of code, written to perform a specific task.
+
+    2)types of function(Method):-parameterised        non-parameterised
+                         area(length,breadth)       
+
+    void function:- no any value return
+
+--------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>06/05/2024 Array
+Array:- it is a homogeneous means collection of data with similar data type
+array declaring rules :- 1) datatype
+                         2)name of array
+                         3)length/size
+                         4)index(starting index 0 ending index length-1)
+
+ways of declaring Array  1) datatype nam_of_array []={element,element,element...}
+                         2) datatype nam_of_array[size];
+                            nam_of_array[]={};
+                         3)datatype Array=new Array()
+
+------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>03/05/2024 nested for loop
+for(condition){
+    for(condition)
+}
+----------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>02/05/2024   loops
+for loops
+while
+do-while
+----------------->>>>>>>>>>>>>>>>30/4/2024   if else ladder Switch case
+1)if(condition){
+    statement
+}else if(condition){
+    statement
+}
+else{
+    statement
+}
+2)
+if(condition){
+    if(condition){
+        statement
+    }
+}else{
+    statement
+}
+
+3)switch(condition){
+    case1:
+        statement
+    break;
+
+    case2:
+        statement;
+    break;
+
+    case_n:
+        statement
+        break;
+    default:
+        statement;
+        break;
+}   
+*****************************************QA*****************************************
+ What are the 4 conditional statements in Java?
+In Java, there are four types of conditional statements: "if," "if-else," "else-if," and "switch."
+
+--------------->>>>>>>>29/4/20024  data type and typecasting and if else statement
+Primitive 
+int --->>> -128 to 127                      
+byte -->>>                   
+
+
+Non-primitive
+Integer   -->>> 
+Byte  -->>> -128 to -127
+Short -->>> -32768 to 32767
+
+
+byte-->> short-->> int-->> long
+
+int to double===   int a=10; double b=a; //its possible to direct
+double to int ===  double a=10.50; int b=a; // its not posssible directly 
+use this ---      int b=int(a);
+
+primitive data type(call by value) non-primitive(and call by reference)
+
+
+
+
+
+
+----------------------------------------------------22/04/2024---------------
+---------- data Abstraction//inheritance// encapsulation //
+
+------>>>>>Data Abstraction
+abstract class ka object create nahi hota. use banane ke liye refference create karna padta he 
+
+---------->>>>>>inheritance:-
+super class,    base class,     parents class
+
+sub class,     derived class,   child class
+
+types of inheritance
+1)multi-level:- parent class 
+2)multiple 
+3)hybrid
+4)Hierarchical 
+
+
+
+
+
+
+
+
+
+
+function calling process in java
+
+eg
+class test{
+    int age=20;
+    p s v m
+{
+    sop("my age is "+age) //1st print
+    demo(age)
+}
+}
+string methods:-
+
+

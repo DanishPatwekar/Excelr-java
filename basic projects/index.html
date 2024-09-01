@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        background-color: rgb(156, 103, 103);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+    }
+    .box{
+        margin: 0px 10px;
+        object-fit: cover;
+    }
+    .box img{
+        object-fit: cover;
+        transition: all 0.5s ease;
+        width: 100px;
+        height: 250px;
+        border: 5px solid wheat;
+        border-radius: 20px;
+    }
+    
+    .box img:hover{
+        border: 5px solid wheat;
+        width: 500px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+    
+</style>
+<body>
+    <div class="box">
+        <img src="./images/0.jpg" alt="">
+        <img src="./images/00.jpg" alt="">
+        <img src="./images/01.jpg" alt="">
+        <img src="./images/0.jpg" alt="">
+    </div>
+    <div class="slider">
+        <marquee behavior="" direction="right">
+            <h1>welcome to my iceland project</h1>
+        </marquee>
+    </div>
+    
+</body>
+</html>
