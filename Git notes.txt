@@ -30,7 +30,7 @@ steps create a txt file name as .gitignore and mention jo file/folder ko ignore 
 20)git merge branch_name:- used for merge branch
 21)git branch -d branch_name: used for delete a branch
 22)git tag -a name: used for tag give name and git tag -d tag_name delete tag 
-23)
+23)git stash
 
 
 
@@ -44,3 +44,10 @@ then open git bash (right click on file or folder)
 5)git push 
 
 add or commit two both at a time like git commit -am 'msg'(single file he tab use karna nahito sab file add honge)
+
+
+undo cmds:-
+
+git commit -amend used for latest commit delete
+git revert  id_of_commit  :used for delete particular commit
+git reset  delete commit
