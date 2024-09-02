@@ -39,9 +39,14 @@ easy steps to upload file on git
 1)create repository on github
 then open git bash (right click on file or folder)
 2)type git init
-3)git add file_name
-4)git commit -m"msg ur choose"
-5)git push 
+3)git remote add origin <remote-repository-URL>:- Remote Repository Link Karna
+4)git config --global user.name "Danish Patwekar"
+5)git config --global user.email "danishpatwekar24@gmail.com"
+6)git push -u origin master
+7)git add file_name
+8)git commit -m"msg ur choose"
+9)git push or git push -u origin master
+ 
 
 add or commit two both at a time like git commit -am 'msg'(single file he tab use karna nahito sab file add honge)
 
@@ -51,3 +56,6 @@ undo cmds:-
 git commit -amend used for latest commit delete
 git revert  id_of_commit  :used for delete particular commit
 git reset  delete commit
+reset 3 types
+    1)git reset hard used for delete permantly all
+    2)git reset soft
