@@ -4,6 +4,9 @@ steps:
 2)install default configuration without any changes
 3)open github website and create account or alredy have account then signin
 4)open cmd and check git version git --v
+*)git remote add origin <remote-repository-URL>:- Remote Repository Link Karna
+Pehle, aapko apni remote repository ko add karna hoga. Aap is command ka use kar sakte hain
+
 5)actualy work start from this step :-type git config --global user.name "Danish Patwekar"
 6)then type git config --global user.email "danishpatwekar24@gmail.com"
 7)git clone used for other repository ko copy karke usme changes karne ke liye
@@ -24,6 +27,13 @@ steps:
 git me jo file add nahi karna he us file ka name ya to jobhi file he unka extention mention karte to o file git pe unstages me nahi dikaye garbageCollection
 steps create a txt file name as .gitignore and mention jo file/folder ko ignore he
 
+20)git merge branch_name:- used for merge branch
+21)git branch -d branch_name: used for delete a branch
+22)git tag -a name: used for tag give name and git tag -d tag_name delete tag 
+23)
+
+
+
 
 easy steps to upload file on git
 1)create repository on github
@@ -31,4 +41,6 @@ then open git bash (right click on file or folder)
 2)type git init
 3)git add file_name
 4)git commit -m"msg ur choose"
-5)git push
+5)git push 
+
+add or commit two both at a time like git commit -am 'msg'(single file he tab use karna nahito sab file add honge)
